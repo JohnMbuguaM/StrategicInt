@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "107118838222",
+    "firebase_url": "https://strategicint-94f71.firebaseio.com",
+    "project_id": "strategicint-94f71",
+    "storage_bucket": "strategicint-94f71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107118838222:android:4090527fb4a3886a",
+        "android_client_info": {
+          "package_name": "strategicbriefs.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107118838222-9c97spqc9vsbb4ddci3rg69moi91njcc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "strategicbriefs.com",
+            "certificate_hash": "e7150c51ac52b86c0c650ef5d9aff68b6071d109"
+          }
+        },
+        {
+          "client_id": "107118838222-25hapdrgsd7s2rerkoca92d76jdgg2iv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5y7QrXvHrX73d81nOJdjtOrE02gil_Is"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107118838222-25hapdrgsd7s2rerkoca92d76jdgg2iv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
