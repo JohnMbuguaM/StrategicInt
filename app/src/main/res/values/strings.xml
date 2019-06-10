@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Strategic Int</string>
+    <string name="persons_of_interest">Persons of Interest</string>
+    <string name="suspects_database">Suspects Database</string>
+    <string name="ct_analytics">CT analytics</string>
+    <string name="ct_analytics1">CT-Analytics</string>
+    <string name="attack_database">Attack Database</string>
+    <string name="notifications">Notifications</string>
+    <string name="log_out">Log Out</string>
+    <string name="exit">Log Out</string>
 </resources>
