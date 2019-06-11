@@ -8,4 +8,20 @@
     <string name="notifications">Notifications</string>
     <string name="log_out">Log Out</string>
     <string name="exit">Log Out</string>
+    <string name="suspect_name">Suspect Name</string>
+    <string name="a_short_description_of_the_suspect">A short Description of the suspect</string>
+    <string name="date">Date</string>
+    <string name="enter_suspect_s_details">Enter Suspect\'s Details</string>
+    <string name="name">Name</string>
+    <string name="save1">SAVE</string>
+    <string name="cancel1">CANCEL</string>
+    <string name="choose_an_image">Choose an Image</string>
+    <string name="enter_suspect_s_description">Enter Suspect\'s Description</string>
+    <string name="enter_other_names_of_the_suspect_a_k_a">Enter other names of the suspect(A.K.A)</string>
+    <string name="descriptiona">Descriptiona</string>
+    <string name="date2">Date</string>
+    <string name="suspect_s_name2">Suspect\'s Name</string>
+    <string name="key_friends3">Key Friends</string>
+    <string name="other_names4">Other Names</string>
+    <string name="aka">AKA</string>
 </resources>

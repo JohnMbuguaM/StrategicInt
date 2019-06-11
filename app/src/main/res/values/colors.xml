@@ -5,6 +5,14 @@
 
     <color name="colorAccent">#D81B60</color>
     <color name="Dark">#22326C</color>
+    <color name="Blue">#465ECC</color>
+    <color name="Bluekabisa">#0000FF</color>
+    <color name="mediumblule">#0000FF</color>
+    <color name="Red">#FF0000</color>
+    <color name="Dark_orage">#FF8C00</color>
+
+
+
 
 </resources>
 
