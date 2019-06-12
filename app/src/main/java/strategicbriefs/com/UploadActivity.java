@@ -27,6 +27,8 @@ import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.util.Objects;
+
 import javax.xml.transform.Result;
 
 public class UploadActivity extends AppCompatActivity {
@@ -44,6 +46,7 @@ public class UploadActivity extends AppCompatActivity {
     private DatabaseReference mDatabaseRef;
     private StorageTask mUploadTask;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +63,7 @@ public class UploadActivity extends AppCompatActivity {
         chooseImageBtn = findViewById(R.id.buttonChooseImage);
         uploadProgressBar = findViewById(R.id.progressBar);
         chooseImageView = findViewById(R.id.chooseImageView);
+
 
 
         mStorageRef = FirebaseStorage.getInstance().getReference("suspects_Upload");
@@ -130,6 +134,7 @@ public class UploadActivity extends AppCompatActivity {
 
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         @Override
@@ -141,15 +146,20 @@ public class UploadActivity extends AppCompatActivity {
                         }
 
                     }, 500);
-                    taskSnapshot.getMetadata();
+
 
                     Toast.makeText(UploadActivity.this, "Upload Successful ", Toast.LENGTH_LONG).show();
 
-                    Teacher upload = new Teacher(nameEditText.getText().toString(),
+                    Teacher upload = new Teacher(
+                            nameEditText.getText().toString().trim(),
                             descriptionEditText.getText().toString(),
                             KeyFriendsEditText.getText().toString(),
                             taskSnapshot.getMetadata().toString(),
                             OtherNamesEditText.getText().toString());
+
+
+
+
 
 
                     String uploadId = mDatabaseRef.push().getKey();

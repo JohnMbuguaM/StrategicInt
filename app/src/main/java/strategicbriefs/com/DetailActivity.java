@@ -14,10 +14,11 @@ import org.w3c.dom.Text;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 public class DetailActivity extends AppCompatActivity {
 
-    private TextView nameTextView, desTextView, keyFriendsTextView, dateTextView;
+    private TextView nameTextView, desTextView, keyFriendsTextView, dateTextView, otherNamesTextView;
     private ImageView suspectsImageView;
 
 
@@ -26,6 +27,7 @@ public class DetailActivity extends AppCompatActivity {
         desTextView = findViewById(R.id.descriptionTextView);
         keyFriendsTextView = findViewById(R.id.keyFrindsTextView);
         dateTextView = findViewById(R.id.dateTextView);
+        otherNamesTextView = findViewById(R.id.nicknamesDetailTExtView);
         suspectsImageView = findViewById(R.id.suspectsDetailsImageViewer);
 
     }
@@ -47,14 +49,18 @@ public class DetailActivity extends AppCompatActivity {
 
         Intent i = this.getIntent();
 
-        String name = i.getExtras().getString("NAME_KEY");
+        String name=i.getExtras().getString("NAME_KEY");
         String description = i.getExtras().getString("DESCRIPTION_KEY");
         String keyFriends = i.getExtras().getString("KeyFRIENDS_KEY");
+        String OtherNames = i.getExtras().getString("OTHER_NAMES");
         String imageURL = i.getExtras().getString("IMAGE_KEY");
 
         nameTextView.setText(name);
+
         desTextView.setText(description);
         keyFriendsTextView.setText(keyFriends);
+        otherNamesTextView.setText(OtherNames);
+
         dateTextView.setText("DATE: " + getDateToday());
         Picasso.get().load(imageURL).placeholder(R.drawable.image_place_holder)
 

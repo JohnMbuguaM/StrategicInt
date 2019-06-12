@@ -52,18 +52,19 @@ public class ItemActivity extends AppCompatActivity implements RecyclerAdapter.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item);
 
-
+        mProgressBar=findViewById(R.id.myDataLoaderProgressBar);
+        mProgressBar.setVisibility(View.VISIBLE);
 
         mRecyclerView = findViewById(R.id.mRecyclerView);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mProgressBar.findViewById(R.id.myDataLoaderProgressBar);
-        mProgressBar.setVisibility(View.VISIBLE);
+
 
 
         mTeachers = new ArrayList<>();
         mAdapter = new RecyclerAdapter(ItemActivity.this, mTeachers);
         mRecyclerView.setAdapter(mAdapter);
+        mAdapter.setOnItemClickListener(ItemActivity.this);
 
         mStorage = FirebaseStorage.getInstance();
         mDatabseRef = FirebaseDatabase.getInstance().getReference("suspects_uploads");
@@ -94,13 +95,16 @@ public class ItemActivity extends AppCompatActivity implements RecyclerAdapter.O
     public void OnItemClick (int position) {
         Teacher clickedTeacher = mTeachers.get(position);
         String [] teacherData = {clickedTeacher.getName(), clickedTeacher.getDescription(),
-                clickedTeacher.getKeyFirends(), clickedTeacher.getImageURI()};
+                clickedTeacher.getKeyFirends(), clickedTeacher.getOtherNames(),clickedTeacher.getImageURI()};
         openDetailActivity(teacherData);
     }
 
     @Override
     public void onShowItemClick (int position ){
         Teacher clickedTeacher = mTeachers.get(position);
+        String [] teacherData = {clickedTeacher.getName(), clickedTeacher.getDescription(),
+                clickedTeacher.getKeyFirends(), clickedTeacher.getOtherNames(),clickedTeacher.getImageURI()};
+        openDetailActivity(teacherData);
 
     }
 

@@ -60,7 +60,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         return teachers.size();
     }
 
-    public enum RecyvlerViewHolder {}
+
 
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener,
@@ -87,9 +87,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         @Override
         public void onClick (View v) {
             if (mListener != null) {
-              int postion = getAdapterPosition();
-              if (postion !=RecyclerView.NO_POSITION) {
-                  mListener.OnItemClick(postion);
+              int position = getAdapterPosition();
+              if (position !=RecyclerView.NO_POSITION) {
+                  mListener.OnItemClick(position);
               }
             }
         }
@@ -108,16 +108,16 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         @Override
         public boolean onMenuItemClick (MenuItem item) {
             if (mListener !=null) {
-                int postion = getAdapterPosition();
-                if (postion !=RecyclerView.NO_POSITION) {
+                int position = getAdapterPosition();
+                if (position !=RecyclerView.NO_POSITION) {
                    switch (item.getItemId()) {
 
                         case 1:
-                            mListener.onShowItemClick(postion);
+                            mListener.onShowItemClick(position);
                             return true;
 
                        case 2:
-                           mListener.onDeleteItemClick(postion);
+                           mListener.onDeleteItemClick(position);
                            return true;
 
 
@@ -142,7 +142,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     }
 
 
-    public void setOnItemClickListener (OnItemClickListener listener) {
+    public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
 
 

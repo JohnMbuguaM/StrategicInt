@@ -4,12 +4,12 @@ import com.google.firebase.database.Exclude;
 
 public class Teacher {
 
-    private String name, description, keyFriends, key, imageURI;
+    private String name, description, keyFriends, key, OtherNames, imageURI;
     private int position;
 
 
 
-    public Teacher(String s, String toString, String string, String s1, String toString1) {
+    public Teacher(String trim, String s, String toString, String string, String s1) {
 //        Empty constructor needed
 
     }
@@ -30,9 +30,16 @@ public class Teacher {
         this.description = Des;
         this.keyFriends = keyFriends;
         this.imageURI = imageURI;
+        this.OtherNames= OtherNames;
     }
 
+    public String getOtherNames() {
+        return OtherNames;
+    }
 
+    public void setOtherNames(String otherNames) {
+        OtherNames = otherNames;
+    }
 
     public String getName() {
         return name;
@@ -50,9 +57,6 @@ public class Teacher {
         return imageURI;
     }
 
-    public int getPosition() {
-        return position;
-    }
 
 
     public void setName(String name) {
@@ -71,9 +75,6 @@ public class Teacher {
         this.imageURI = imageURI;
     }
 
-    public void setPosition(int position) {
-        this.position = position;
-    }
 
     @Exclude
 

@@ -8,30 +8,32 @@
     tools:context=".ItemActivity"
     android:orientation="vertical"
     >
+
+    <ProgressBar
+        android:id="@+id/myDataLoaderProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"/>
+
+
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="S.I Suspect Database"
         android:textAlignment="center"
-        android:textStyle=""
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/mediumblule"
-        />
-    <ProgressBar
-        android:id="@+id/myDataLoaderProgressBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:indeterminate="true"
-        android:indeterminateBehavior="cycle"
-        android:visibility="gone"
-        />
+        android:textStyle="" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/mRecyclerView"
+
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
-        />
+        android:layout_weight="0.5" />
 
 </LinearLayout>
