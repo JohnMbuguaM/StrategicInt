@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Blue"
+    tools:context=".View.DatabaseMain">
+
+    <TextView
+        android:id="@+id/headerTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="S.I Suspect Database"
+        android:textAlignment="center"
+        android:layout_marginTop="32dp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/mint_white" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="70dp"
+        android:layout_above="@+id/button_zone"
+        android:layout_marginBottom="-550dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/silogo" />
+
+    <LinearLayout
+        android:id="@+id/button_zone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_marginTop="500dp"
+        android:layout_marginBottom="30dp"
+        android:background="#00F0F0F0"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/openTeachersActivityBtn"
+            style="?android:attr/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button_zone"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:background="#00F0F0F0"
+            android:text="View All"
+            android:textColor="#f0f0f0" />
+
+        <Button
+            android:id="@+id/openUploadActivityBtn"
+            style="?android:attr/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/button_zone"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:background="#00F0F0F0"
+            android:clickable="true"
+            android:text="Add New"
+            android:textColor="@color/mint_white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -11,30 +11,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RowModel"></activity>
-        <activity android:name=".UploadActivity" />
-        <!--<activity android:name=".DetailActivity" />-->
-        <activity android:name=".ItemActivity" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/SI"
+            />
+        <activity android:name=".View.DatabaseMain" />
+        <!--<activity android:name=".D" />-->
 
         <activity
-            android:name=".DetailActivity"
+            android:name=".SplashActivity"
             android:theme="@style/SI">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+
+
+
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/SI">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".View.ItemsActivity"
+            android:label="List Page "
+            android:parentActivityName=".View.DatabaseMain" />
+        <activity
+            android:name=".View.UploadActivity"
+            android:label="Upload Page "
+            android:parentActivityName=".View.DatabaseMain" />
+        <activity
+            android:name=".View.DetailsActivity"
+            android:label="Details Page "
+            android:parentActivityName=".View.ItemsActivity" />
 
-
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
