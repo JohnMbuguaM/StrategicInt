@@ -27,7 +27,7 @@
             android:id="@+id/txtdash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="STRATEGIC  INTELLIGENCE"
+            android:text="@string/strategic_intelligence4"
             android:textColor="#F7B81C"
             android:textSize="18sp" />
 
@@ -38,7 +38,8 @@
             android:layout_height="80dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:src="@drawable/silogo" />
+            android:src="@drawable/silogo"
+            tools:ignore="RtlHardcoded" />
 
     </RelativeLayout>
 

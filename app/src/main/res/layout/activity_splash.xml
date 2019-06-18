@@ -21,7 +21,7 @@
         android:paddingEnd="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="STRATEGIC INTELLIGENCE"
+        android:text="@string/strategic_intelligence7"
         android:textColor="#0000FF"
         android:textAlignment="center"
         android:layout_marginTop="-5sp"
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
-        android:text="Counter-Terrorism Unit"
+        android:text="@string/counter_terrorism_unit8"
         android:textAlignment="center"
         android:textColor="#0000FF"
         android:textSize="18sp"/>

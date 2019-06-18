@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View.DetailsActivity"
-    android:background="@color/Bluekabisa"
+    android:background="@color/Blue"
     tools:showIn="@layout/activity_detail">
 
     <android.support.v7.widget.CardView
@@ -28,9 +28,8 @@
             <ImageView
                 android:id="@+id/teacherDetailImageView"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="150dp"
                 android:padding="5dp"
-                android:layout_alignParentTop="true"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_account_circle_black_24dp" />
 
@@ -48,7 +47,7 @@
                     android:maxLines="1"
                     android:textStyle="bold"
                     android:textColor="@color/colorAccent"
-                    android:text="Suspect's Name" />
+                    android:text="@string/suspect_s_name5" />
                 <TextView
                     android:id="@+id/dateDetailTextView"
                     android:layout_width="wrap_content"
@@ -57,7 +56,7 @@
                     android:padding="5dp"
                     android:maxLines="1"
                     android:layout_marginEnd="5dp"
-                    android:text="DATE" />
+                    android:text="@string/date3" />
 
 
 
@@ -69,16 +68,62 @@
                         android:padding="5dp"
                         android:textColor="#0f0f0f"
                         android:minLines="4"
-                        android:text="Suspect's Description Here........." />
-
+                        android:text="@string/suspect_s_description_here1" />
                 <TextView
-                    android:id="@+id/categoryDetailTextView"
+                    android:id="@+id/keyFriends"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:padding="5dp"
-                    android:textStyle="italic"
-                    android:text="Category : Zen Quotes" />
+                    android:maxLines="3"
+
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/keyfriends6"
+                    />
+                <TextView
+                    android:id="@+id/TextViewKeyFriends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:padding="5dp"
+                    android:maxLines="3"
+                    android:textColor="@color/Bluekabisa"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/keyfriends0"
+                    android:textStyle="italic"/>
+                <TextView
+                    android:id="@+id/Link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:padding="5dp"
+                    android:maxLines="3"
+
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/link0"
+                    />
+                <TextView
+                    android:id="@+id/TextViewLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:padding="5dp"
+                    android:maxLines="3"
+                    android:textColor="@color/Bluekabisa"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/link8"
+                    android:textStyle="italic"/>
+
+
+
+                <!--<TextView-->
+                    <!--android:id="@+id/categoryDetailTextView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:textStyle="italic"-->
+                    <!--android:text="Category : Zen Quotes" />-->
 
 
             </LinearLayout>

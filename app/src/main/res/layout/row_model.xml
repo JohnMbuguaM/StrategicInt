@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp"
     card_view:cardCornerRadius="5dp"
     card_view:cardElevation="10dp"
-    android:layout_height="200dp">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:id="@+id/teacherImageView"
             android:padding="5dp"
-            android:src="@drawable/image_place_holder" />
+            android:src="@drawable/image_place_holder"
+            android:contentDescription="@string/place_holder2" />
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Suspect's Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/suspect_s_name0"
             android:id="@+id/nameTextView"
             android:padding="5dp"
             android:textColor="@color/colorAccent" />
@@ -35,20 +37,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Date"
+            android:text="@string/date6"
             android:id="@+id/dateTextView"
             android:padding="5dp"
             android:textStyle="italic"/>
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/description0"
+            android:minLines="3"
+            android:textStyle="normal"
+            android:id="@+id/descriptionTextView"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/KeyFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/key_friends3"
+            android:padding="5dp"
+            android:textColor="#000000" />
+        <TextView
+            android:id="@+id/KeyFriendsTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Description"
-            android:minLines="2"
+            android:text="@string/key_friends7"
             android:textStyle="italic"
-            android:id="@+id/descriptionTextView"
-            android:padding="5dp"/>
+            android:layout_marginTop="-8dp"
+            android:padding="5dp"
+            android:textColor="@color/Bluekabisa" />
+        <!--<TextView-->
+            <!--android:id="@+id/LinkTextView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+            <!--android:text="Link"-->
+            <!--android:padding="5dp"-->
+            <!--android:textColor="@color/Bluekabisa" />-->
+
 
     </LinearLayout>
     </LinearLayout>

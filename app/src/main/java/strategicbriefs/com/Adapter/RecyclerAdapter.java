@@ -44,6 +44,8 @@ public  class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recyc
         Teacher currentTeacher = teachers.get(position);
         holder.nameTextView.setText(currentTeacher.getName());
         holder.descriptionTextView.setText(currentTeacher.getDescription());
+        holder.keyFriendsTextView.setText(currentTeacher.getKeyFriends());
+//        holder.linkTextview.setText(currentTeacher.getLink());
         holder.dateTextView.setText(getDateToday());
         Picasso.get()
                 .load(currentTeacher.getImageUrl())
@@ -61,15 +63,18 @@ public  class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recyc
     public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener,
             View.OnCreateContextMenuListener, MenuItem.OnMenuItemClickListener {
 
-        public TextView nameTextView,descriptionTextView,dateTextView;
+        public TextView nameTextView,descriptionTextView,dateTextView,keyFriendsTextView, linkTextview;
         public ImageView teacherImageView;
 
         public RecyclerViewHolder(View itemView) {
             super(itemView);
             nameTextView =itemView.findViewById ( R.id.nameTextView );
             descriptionTextView = itemView.findViewById(R.id.descriptionTextView);
+            keyFriendsTextView = itemView.findViewById(R.id.KeyFriendsTextView);
+//            linkTextview = itemView.findViewById(R.id.LinkTextView);
             dateTextView = itemView.findViewById(R.id.dateTextView);
             teacherImageView = itemView.findViewById(R.id.teacherImageView);
+
 
             itemView.setOnClickListener(this);
             itemView.setOnCreateContextMenuListener(this);

@@ -37,7 +37,7 @@ public class UploadActivity extends AppCompatActivity{
     private Button chooseImageBtn;
     private Button uploadBtn;
     private EditText nameEditText;
-    private EditText descriptionEditText;
+    private EditText descriptionEditText, keyFriends, link;
     private ImageView chosenImageView;
     private ProgressBar uploadProgressBar;
 
@@ -56,6 +56,8 @@ public class UploadActivity extends AppCompatActivity{
         uploadBtn = findViewById(R.id.uploadBtn);
         nameEditText = findViewById(R.id.nameEditText);
         descriptionEditText = findViewById ( R.id.descriptionEditText );
+        keyFriends = findViewById(R.id.ETKeyFriends);
+        link=findViewById(R.id.ETLink);
         chosenImageView = findViewById(R.id.chosenImageView);
         uploadProgressBar = findViewById(R.id.progress_bar);
 
@@ -129,7 +131,7 @@ public class UploadActivity extends AppCompatActivity{
 
                             final Teacher upload = new Teacher(nameEditText.getText().toString().trim(),
                                     taskSnapshot.getMetadata().toString(),
-                                    descriptionEditText.getText ().toString ());
+                                    descriptionEditText.getText ().toString (),keyFriends.getText().toString(),link.getText().toString());
                             final String uploadId = mDatabaseRef.push().getKey();
 
                             Task<Uri> downloadUrl = fileReference.getDownloadUrl();
@@ -174,7 +176,7 @@ public class UploadActivity extends AppCompatActivity{
         }
     }
     private void openImagesActivity(){
-        Intent intent = new Intent(this, DatabaseMain.class);
+        Intent intent = new Intent(this, ItemsActivity.class);
         startActivity(intent);
     }
 }

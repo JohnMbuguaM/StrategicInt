@@ -41,7 +41,9 @@ public class ItemsActivity extends AppCompatActivity implements RecyclerAdapter.
         Intent intent = new Intent(this, DetailsActivity.class);
         intent.putExtra("NAME_KEY",data[0]);
         intent.putExtra("DESCRIPTION_KEY",data[1]);
-        intent.putExtra("IMAGE_KEY",data[2]);
+        intent.putExtra("KEYFRIENDS_KEY",data[2]);
+        intent.putExtra("LINK_KEY",data[3]);
+        intent.putExtra("IMAGE_KEY",data[4]);
         startActivity(intent);
     }
     @Override
@@ -89,14 +91,16 @@ public class ItemsActivity extends AppCompatActivity implements RecyclerAdapter.
     }
     public void onItemClick(int position) {
         Teacher clickedTeacher=mTeachers.get(position);
-        String[] teacherData={clickedTeacher.getName(),clickedTeacher.getDescription(),clickedTeacher.getImageUrl()};
+        String[] teacherData={clickedTeacher.getName(),clickedTeacher.getDescription(),clickedTeacher.getKeyFriends()
+                ,clickedTeacher.getLink(), clickedTeacher.getImageUrl()};
         openDetailActivity(teacherData);
     }
 
     @Override
     public void onShowItemClick(int position) {
         Teacher clickedTeacher=mTeachers.get(position);
-        String[] teacherData={clickedTeacher.getName(),clickedTeacher.getDescription(),clickedTeacher.getImageUrl()};
+        String[] teacherData={clickedTeacher.getName(),clickedTeacher.getDescription(),clickedTeacher.getKeyFriends(),
+                clickedTeacher.getLink(), clickedTeacher.getImageUrl()};
         openDetailActivity(teacherData);
     }
 

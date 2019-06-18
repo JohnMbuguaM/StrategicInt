@@ -14,7 +14,9 @@
         <activity android:name=".MainActivity"
             android:theme="@style/SI"
             />
-        <activity android:name=".View.DatabaseMain" />
+        <activity android:name=".View.DatabaseMain"
+            android:theme="@style/SI"
+            />
         <!--<activity android:name=".D" />-->
 
         <activity
@@ -30,7 +32,7 @@
         </activity>
         <activity
             android:name=".View.ItemsActivity"
-            android:label="List Page "
+            android:theme="@style/SI"
             android:parentActivityName=".View.DatabaseMain" />
         <activity
             android:name=".View.UploadActivity"

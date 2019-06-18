@@ -7,6 +7,8 @@ public class Teacher {
     private String imageURL;
     private String key;
     private String description;
+    private String KeyFriends;
+    private String Link;
     private int position;
 
     public Teacher() {
@@ -15,14 +17,33 @@ public class Teacher {
     public Teacher (int position){
         this.position = position;
     }
-    public Teacher(String name, String imageUrl ,String Des) {
+    public Teacher(String name, String imageUrl ,String Des, String keyfriends, String link) {
         if (name.trim().equals("")) {
             name = "No Name";
         }
         this.name = name;
         this.imageURL = imageUrl;
         this.description = Des;
+        this.KeyFriends = keyfriends;
+        this.Link = link;
     }
+
+    public String getKeyFriends() {
+        return KeyFriends;
+    }
+
+    public void setKeyFriends(String keyFriends) {
+        KeyFriends = keyFriends;
+    }
+
+    public String getLink() {
+        return Link;
+    }
+
+    public void setLink(String link) {
+        Link = link;
+    }
+
     public String getDescription() {
         return description;
     }
