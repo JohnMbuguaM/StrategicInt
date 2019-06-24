@@ -154,6 +154,7 @@ public class UploadActivity extends AppCompatActivity{
 
                             uploadProgressBar.setVisibility(View.INVISIBLE);
                             openImagesActivity ();
+                            finish();
 
                         }
                     })
